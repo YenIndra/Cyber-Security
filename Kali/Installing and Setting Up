@@ -1,0 +1,29 @@
+Install Kali using vm ware image in the vmware player.
+user - kali
+pass - kali
+
+In the Network adapter section of Kali linux you can chose NAT or Bridge. The default is NAT which I kept as it is because I didn't knew the difference.
+
+###Setting the Kali IP address (OPTIONAL)#####
+
+Open a Terminal Prompt 
+Enter, “nano /etc/network/interfaces” to open the network interface file for editing.
+Now we want to enter the following information:
+auto eth0
+iface eth0 inet static
+address 192.168.1.39
+netmask 255.255.255.0
+gateway 192.168.1.1
+
+### Installing vmware tools for Kali#####
+
+apt-get update
+apt-get install open-vm-tools-desktop fuse
+reboot
+
+### Install a virtual Image of Metasploitable which is a vulnerable machine for practice ###
+Login name: msfadmin
+Password: msfadmin
+
+### you can also install windows if you want to play around wi
+
